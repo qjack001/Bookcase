@@ -2,7 +2,7 @@
 	<section>
 		<svg :class="{ 'no-animate': noAnimate }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 422" role="figure" aria-label="Book shelves">
 			<g class="first-case">
-				<path class="bookshelf-background" d="M0 0h240v384H0zM246"/>
+				<path class="bookshelf-background" d="M0 0h240v384H0z"/>
 				<g class="bookshelf-sides">
 					<path stroke="none" d="M0 0h8v422H0z"/>
 					<path fill="none" d="M.5.5h7v421h-7z"/>

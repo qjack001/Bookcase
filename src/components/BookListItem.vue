@@ -1,6 +1,6 @@
 <template>
 	<li class="book-item">
-		<g-link :to="post.path" class="read">
+		<g-link :to="post.path">
 			{{ post.title }}
 			<span class="author">
 				— {{ post.author }}
@@ -10,6 +10,7 @@
 				<tag :key="tag" 
 					v-for="tag in post.tags" 
 					:tag="tag"
+					:noAnimate="true"
 				/>
 			</ul>
 		</g-link>
@@ -21,7 +22,7 @@
 
 	export default
 	{
-		props: ["post"],
+		props: [ "post" ],
 
 		components:
 		{
@@ -117,6 +118,11 @@
 	a:hover, a:focus
 	{
 		border-color: var(--grey-00);
+	}
+
+	a:focus-visible
+	{
+		outline-color: var(--grey-10);
 	}
 
 	.author

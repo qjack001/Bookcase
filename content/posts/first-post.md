@@ -20,4 +20,4 @@ background: "radial-gradient(circle, rgba(240,42,0,1) 0%, rgba(229,43,4,1) 30%, 
 date: 		2019-04-20
 ---
 
-The ad men behind CBC Radio’s The Age of Persuasion combine lively social history and years of industry experience to show how the art of persuasion shapes our culture.
+The ad men behind CBC Radio’s *The Age of Persuasion* combine lively social history and years of industry experience to show how the art of persuasion shapes our culture.
