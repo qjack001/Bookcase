@@ -27,9 +27,11 @@
 			DarkmodeButton,
 			BookListItem
 		},
-		metaInfo:
+		metaInfo() 
 		{
-			title: "Bookcase"
+			return {
+				title: 'Home',
+			};
 		},
 		computed:
 		{

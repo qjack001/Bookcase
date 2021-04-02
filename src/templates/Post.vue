@@ -47,8 +47,14 @@
 			Tag,
 			BookShelf,
 			BookSpine
+		},
+		metaInfo() 
+		{
+			return {
+				title: this.$page.post.title,
+			};
 		}
-	};
+	}
 </script>
 
 <page-query>
