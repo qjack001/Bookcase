@@ -73,6 +73,10 @@
 	{
 		border-bottom: 1px solid var(--grey-10);
 	}
+
+	/* FIXME: hack */
+	input { margin-top: 0.7rem; /* adjust for safari */ }
+	@supports (aspect-ratio: 1 / 1) { input { margin-top: 0; } }
 	
 	label
 	{
