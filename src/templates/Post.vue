@@ -12,8 +12,9 @@
 				<ul class="keywords">
 					<title>Keywords</title>
 					<tag :key="tag" 
-						v-for="tag in $page.post.tags" 
+						v-for="(tag, index) in $page.post.tags" 
 						:tag="tag"
+						:animationDelay="(index / 10) + 0.4"
 					/>
 				</ul>
 			</section>
@@ -94,6 +95,15 @@
 		width: 1121px;
 		gap: 80px;
 	}
+	
+	h1,
+	p,
+	article
+	{
+		animation: fade-in 0.4s ease-in;
+		animation-fill-mode: forwards;
+		opacity: 0;
+	}
 
 	h1
 	{
@@ -107,6 +117,8 @@
 		overflow-wrap: break-word;
 		word-wrap: break-word;
 		hyphens: auto;
+
+		animation-duration: 0.6s;
 	}
 
 	p, 
@@ -118,16 +130,25 @@
 		overflow-wrap: break-word;
 		word-wrap: break-word;
 		hyphens: auto;
+
+		animation-delay: 0.2s;
 	}
 
 	article
 	{
 		text-indent: 40px;
+		animation-delay: 0.3s;
 	}
 
 	ul
 	{
 		padding-left: 95px; /* 100px, subtract margin from tags */
+	}
+
+	@keyframes fade-in
+	{
+		from { opacity: 0; }
+		to { opacity: 1; }
 	}
 
 	@media screen and (max-width: 1200px)

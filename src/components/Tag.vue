@@ -1,13 +1,18 @@
 <template>
-	<li>
-		{{ this.tag }}
+	<li :class="{ 'no-animate': noAnimate }" 
+		:style="{ animationDelay: animationDelay + 's' }">
+		{{ tag }}
 	</li>
 </template>
 
 <script>
 	export default
 	{
-		props: ["tag"]
+		props: [ 
+			"tag", 
+			"animationDelay", 
+			"noAnimate" 
+		]
 	};
 </script>
 
@@ -28,6 +33,29 @@
 		background: var(--grey-50);
 		border: 1px solid var(--grey-20);
 		border-radius: 4px;
+
+		animation: rise-up 0.8s cubic-bezier(0,1.4,.6,1),
+				fade-in 0.8s ease;
+		animation-fill-mode: forwards;
+		opacity: 0;
+	}
+
+	li.no-animate
+	{
+		animation: none;
+		opacity: 1;
+	}
+
+	@keyframes rise-up
+	{
+		from { transform: translateY(50px); }
+		to { transform: translateY(0px); }
+	}
+
+	@keyframes fade-in
+	{
+		from { opacity: 0; }
+		to { opacity: 1; }
 	}
 
 	@media screen and (max-width: 640px)
