@@ -1,15 +1,16 @@
 <template>
 	<layout>
 		<header>
-			<span></span>
-			<darkmode-button/>
+			<search-bar v-model="searchQuery" />
+			<darkmode-button />
 		</header>
 		<nav>
 			<ul class="book-list" aria-label="books">
 				<book-list-item 
 					:key="book.node.id" 
 					v-for="book in books" 
-					:post="book.node" 
+					:post="book.node"
+					v-show="searchMatch(searchQuery, book.node)"
 				/>
 			</ul>
 		</nav>
@@ -19,18 +20,26 @@
 <script>
 	import DarkmodeButton from "@/components/DarkmodeButton";
 	import BookListItem from "@/components/BookListItem";
+	import SearchBar from '@/components/SearchBar';
 
 	export default 
 	{
+		data()
+		{
+			return {
+				searchQuery: ''  
+			}
+		},
 		components:
 		{
 			DarkmodeButton,
+			SearchBar,
 			BookListItem
 		},
 		metaInfo() 
 		{
 			return {
-				title: 'Home',
+				title: 'Search',
 			};
 		},
 		computed:
@@ -38,6 +47,16 @@
 			books() 
 			{
 				return this.$page.allPost.edges;
+			}
+		},
+		methods:
+		{
+			searchMatch(query, book)
+			{
+				if (query == '') { return true; }
+
+				let infoBlob = [book.title, book.author, book.tags.join(' ')].join(' ').toLowerCase();
+				return query.toLowerCase().split(' ').every(e => infoBlob.includes(e))
 			}
 		}
 	};
@@ -71,6 +90,12 @@
 </page-query>
 
 <style>
+	header
+	{
+		display: grid;
+		grid-template-columns: calc(100vw - 36ch) 36ch;
+	}
+
 	ul
 	{
 		margin-top: 40px;
