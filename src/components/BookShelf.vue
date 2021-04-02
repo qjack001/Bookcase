@@ -68,4 +68,32 @@
 		width: 496px;
 		height: 422px;
 	}
+
+	.first-case
+	{
+		animation: rise-up-1 0.8s cubic-bezier(0, 1, 1, 1);
+	}
+
+	.second-case
+	{
+		animation: rise-up-2 1.0s cubic-bezier(0, 1, 1, 1);
+	}
+
+	.no-animate .first-case,
+	.no-animate .second-case
+	{
+		animation: none;
+	}
+
+	@keyframes rise-up-1
+	{
+		from { transform: translateY(200px); }
+		to { transform: translateY(0px); }
+	}
+
+	@keyframes rise-up-2
+	{
+		from { transform: translateY(400px); }
+		to { transform: translateY(0px); }
+	}
 </style>
