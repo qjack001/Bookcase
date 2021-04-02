@@ -1,6 +1,11 @@
 <template>
 	<div class="darkmode-button">
-		<input type="checkbox" id="darkmode-toggle" @change="toggleDarkmode()" v-on:keyup.enter="enterOverride()">
+		<input 
+			type="checkbox" 
+			id="darkmode-toggle" 
+			@change="toggleDarkmode()" 
+			v-on:keyup.enter="enterOverride()"
+		/>
 		<label for="darkmode-toggle">Darkmode</label>
 		<div id="darkmode-mask" role="presentation"></div>
 	</div>
@@ -76,14 +81,14 @@
 		background: var(--grey-10);
 	}
 
-	input + label::after
+	label::after
 	{
 		transform: scale(0.7) translateX(25px) translateY(-25px);
 		transition: transform 2s ease;
 		background: var(--grey-40);
 	}
 
-	input:checked + label::after
+	.darkmode label::after
 	{
 		transform: scale(0.7) translateX(0.6rem) translateY(-0.6rem);
 	}
