@@ -20,13 +20,9 @@
 					:noAnimate="true"
 				/>
 			</book-shelf>
+			<h1>What is this site?</h1>
+			<p>More or less nothing.</p>
 		</main>
-		<ul class="book-list" aria-label="books">
-			<book-list-item 
-				:key="book.node.id" 
-				v-for="book in books" 
-				:post="book.node" />
-		</ul>
 	</layout>
 </template>
 
@@ -48,7 +44,7 @@
 		metaInfo() 
 		{
 			return {
-				title: 'All Books',
+				title: 'About',
 			};
 		},
 		computed:
@@ -88,7 +84,7 @@
 	}
 </page-query>
 
-<style>
+<style scoped>
 	header
 	{
 		display: grid;
@@ -97,7 +93,32 @@
 
 	.bookshelf
 	{
-		margin: 150px auto;
+		margin: 100px auto 0;
+	}
+
+	h1
+	{
+		margin-top: 60px;
+		font-size: var(--lg-text);
+		font-weight: normal;
+		font-style: italic;
+		letter-spacing: -0.02em;
+		line-height: 1;
+		text-align: center;
+
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
+	}
+
+	p
+	{
+		font-size: var(--md-text);
+		text-align: center;
+
+		overflow-wrap: break-word;
+		word-wrap: break-word;
+		hyphens: auto;
 	}
 
 	@media screen and (max-width: 550px)
@@ -106,6 +127,11 @@
 		{
 			transform: scale(0.6);
 			transform-origin: top;
-		}	
+		}
+
+		h1
+		{
+			margin-top: -120px;
+		}
 	}
 </style>
