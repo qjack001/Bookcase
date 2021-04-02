@@ -4,12 +4,15 @@
 			<span></span>
 			<darkmode-button/>
 		</header>
-		<ul class="book-list">
-			<book-list-item 
-				:key="book.node.id" 
-				v-for="book in books" 
-				:post="book.node" />
-		</ul>
+		<nav>
+			<ul class="book-list" aria-label="books">
+				<book-list-item 
+					:key="book.node.id" 
+					v-for="book in books" 
+					:post="book.node" 
+				/>
+			</ul>
+		</nav>
 	</layout>
 </template>
 

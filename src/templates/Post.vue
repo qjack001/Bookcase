@@ -9,8 +9,7 @@
 				<h1>{{ $page.post.title }}</h1>
 				<p>{{ $page.post.author }}</p>
 				<article v-html="$page.post.content"/>
-				<ul class="keywords">
-					<title>Keywords</title>
+				<ul class="keywords" aria-label="keywords">
 					<tag :key="tag" 
 						v-for="(tag, index) in $page.post.tags" 
 						:tag="tag"

@@ -5,8 +5,7 @@
 			<span class="author">
 				— {{ post.author }}
 			</span>
-			<ul class="keywords">
-				<title>Keywords</title>
+			<ul class="keywords" aria-label="keywords">
 				<tag :key="tag" 
 					v-for="tag in post.tags" 
 					:tag="tag"

@@ -1,7 +1,7 @@
 <template>
 	<div
 		role="figure" 
-		:aria-label="'Book spine, located on the ' + shelf + ' shelf of the ' + bookcase + ' bookcase. The book is ' + distance + ' centimeters from the left-edge of the shelf.'"
+		:aria-label="title + ' book spine, located on the ' + shelf + ' shelf of the ' + bookcase + ' bookcase. The book is ' + distance + ' centimeters from the left-edge of the shelf.'"
 		:style="{ width: (width * scaleMultiplier) + 'px', height: (height * scaleMultiplier) + 'px', background: background, transform: 'translateX(' + (distance * scaleMultiplier) + 'px)' }"
 		:class="[ bookcase, shelf, { 'no-animate': noAnimate } ]"
 	>
@@ -14,6 +14,7 @@
 	export default 
 	{
 		props: [
+			"title",
 			"bookcase",
 			"shelf",
 			"distance",
