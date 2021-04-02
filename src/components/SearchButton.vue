@@ -18,6 +18,7 @@
 		display: grid;
 		grid-template-columns: 3rem 7.5rem;
 		grid-template-rows: 3rem;
+		gap: 1px;
 		height: 3rem;
 
 		box-sizing: border-box;
