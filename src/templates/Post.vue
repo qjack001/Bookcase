@@ -2,6 +2,7 @@
 	<layout>
 		<header>
 			<search-button/>
+			<darkmode-button/>
 		</header>
 		<main>
 			<section>
@@ -32,6 +33,7 @@
 
 <script>
 	import SearchButton from '@/components/SearchButton';
+	import DarkmodeButton from '@/components/DarkmodeButton';
 	import Tag from '@/components/Tag';
 	import BookShelf from '@/components/BookShelf';
 	import BookSpine from '@/components/BookSpine';
@@ -41,6 +43,7 @@
 		components:
 		{
 			SearchButton,
+			DarkmodeButton,
 			Tag,
 			BookShelf,
 			BookSpine
@@ -77,6 +80,12 @@
 </page-query>
 
 <style scoped>
+	header
+	{
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+
 	main
 	{
 		margin: 100px auto;

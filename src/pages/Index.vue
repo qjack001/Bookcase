@@ -1,5 +1,9 @@
 <template>
 	<layout>
+		<header>
+			<span></span>
+			<darkmode-button/>
+		</header>
 		<ul class="book-list">
 			<book-list-item 
 				:key="book.node.id" 
@@ -10,12 +14,15 @@
 </template>
 
 <script>
+	import DarkmodeButton from "@/components/DarkmodeButton";
 	import BookListItem from "@/components/BookListItem";
+
 	export default 
 	{
 		components:
 		{
-			BookListItem,
+			DarkmodeButton,
+			BookListItem
 		},
 		metaInfo:
 		{
