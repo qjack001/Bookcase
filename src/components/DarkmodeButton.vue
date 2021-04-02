@@ -110,4 +110,11 @@
 		transition: opacity 0.6s ease-in;
 	}
 
+	@media (prefers-reduced-motion)
+	{
+		#darkmode-mask
+		{
+			display: none;
+		}
+	}
 </style>

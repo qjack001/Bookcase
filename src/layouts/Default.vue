@@ -55,6 +55,15 @@
 		padding: 0;
 	}
 
+	@media (prefers-reduced-motion)
+	{
+		*, *::after
+		{
+			animation-duration: 0s !important;
+			animation-delay: 0s !important;
+		}
+	}
+
 	@media screen and (max-width: 640px)
 	{
 		html
