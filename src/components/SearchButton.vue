@@ -14,21 +14,40 @@
 <style scoped>
 	.search-button
 	{
+		position: relative;
 		display: grid;
 		grid-template-columns: 3rem 7.5rem;
 		grid-template-rows: 3rem;
 		height: 3rem;
 
 		box-sizing: border-box;
-		padding: 20px;
+		padding: 20px 30px;
 
 		text-decoration: none;
 		color: var(--grey-10);
 	}
 
-	.search-button:hover
+	.search-button:hover,
+	.search-button:focus
 	{
 		color: var(--grey-00);
+		outline: none;
+	}
+
+	.search-button:focus-visible::after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 21ch;
+		height: 4.2rem;
+
+		border: 2px solid var(--grey-10);
+		border-radius: 4px;
+
+		pointer-events: none;
 	}
 
 	.icon

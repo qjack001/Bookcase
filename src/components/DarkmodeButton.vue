@@ -88,6 +88,34 @@
 		transform: scale(0.7) translateX(0.6rem) translateY(-0.6rem);
 	}
 
+	.darkmode-button:focus-within::after
+	{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		width: 23ch;
+		height: 4.2rem;
+
+		border: 2px solid var(--grey-10);
+		border-radius: 4px;
+
+		pointer-events: none;
+	}
+
+	.darkmode-button:hover label,
+	.darkmode-button:focus-within label
+	{
+		color: var(--grey-00);
+	}
+
+	.darkmode-button:hover label::before,
+	.darkmode-button:focus-within label::before
+	{
+		background: var(--grey-00);
+	}
+
 	#darkmode-mask
 	{
 		z-index: 999;
