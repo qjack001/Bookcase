@@ -1,12 +1,6 @@
 <template>
 	<div>
 		<slot/>
-		<footer>
-			<p>
-				<g-link :to="'/about'">What is this?</g-link>
-				• Jack Guinane &copy; 2021
-			</p>
-		</footer>
 	</div>
 </template>
 
