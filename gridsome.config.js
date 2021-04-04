@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Bookcase',
+  siteUrl: 'romantic-hamilton-dec532.netlify.app',
   siteDescription: 'Locates where I put my books',
   plugins: [
     {
