@@ -1,5 +1,5 @@
 <template>
-	<div class="darkmode-button">
+	<div class="darkmode-button" v-focus-visible>
 		<input 
 			type="checkbox" 
 			id="darkmode-toggle" 
@@ -93,7 +93,7 @@
 		transform: scale(0.7) translateX(0.6rem) translateY(-0.6rem);
 	}
 
-	.darkmode-button:focus-within::after
+	.darkmode-button[v-focus-visible=true]:focus-within::after
 	{
 		content: "";
 		display: block;
@@ -110,13 +110,13 @@
 	}
 
 	.darkmode-button:hover label,
-	.darkmode-button:focus-within label
+	.darkmode-button[v-focus-visible=true]:focus-within label
 	{
 		color: var(--grey-00);
 	}
 
 	.darkmode-button:hover label::before,
-	.darkmode-button:focus-within label::before
+	.darkmode-button[v-focus-visible=true]:focus-within label::before
 	{
 		background: var(--grey-00);
 	}

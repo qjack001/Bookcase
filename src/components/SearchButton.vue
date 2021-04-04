@@ -35,7 +35,7 @@
 		outline: none;
 	}
 
-	.search-button:focus-visible::after
+	.search-button[v-focus-visible=true]:focus::after
 	{
 		content: "";
 		display: block;
