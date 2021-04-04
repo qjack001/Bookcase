@@ -7,4 +7,3 @@ dist
 .env
 .env.*
 .vscode/
-yarn.lock
