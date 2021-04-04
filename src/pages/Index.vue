@@ -3,7 +3,7 @@
 		<header>
 			<search-bar v-model="searchQuery"/>
 			<darkmode-button/>
-			<no-script-banner/>
+			<!-- <no-script-banner/> -->
 		</header>
 		<nav>
 			<ul class="book-list" aria-label="books">

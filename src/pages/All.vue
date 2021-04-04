@@ -3,7 +3,7 @@
 		<header>
 			<search-button/>
 			<darkmode-button/>
-			<no-script-banner/>
+			<!-- <no-script-banner/> -->
 		</header>
 		<main>
 			<book-shelf :noAnimate="true" class="bookshelf">
