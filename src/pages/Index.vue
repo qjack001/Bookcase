@@ -1,8 +1,9 @@
 <template>
 	<layout>
 		<header>
-			<search-bar v-model="searchQuery" />
-			<darkmode-button />
+			<search-bar v-model="searchQuery"/>
+			<darkmode-button/>
+			<no-script-banner/>
 		</header>
 		<nav>
 			<ul class="book-list" aria-label="books">
@@ -21,6 +22,7 @@
 	import DarkmodeButton from "@/components/DarkmodeButton";
 	import BookListItem from "@/components/BookListItem";
 	import SearchBar from '@/components/SearchBar';
+	import NoScriptBanner from '@/components/NoScriptBanner';
 
 	export default 
 	{
@@ -34,7 +36,8 @@
 		{
 			DarkmodeButton,
 			SearchBar,
-			BookListItem
+			BookListItem,
+			NoScriptBanner
 		},
 		metaInfo() 
 		{

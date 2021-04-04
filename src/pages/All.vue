@@ -3,6 +3,7 @@
 		<header>
 			<search-button/>
 			<darkmode-button/>
+			<no-script-banner/>
 		</header>
 		<main>
 			<book-shelf :noAnimate="true" class="bookshelf">
@@ -29,6 +30,7 @@
 	import DarkmodeButton from "@/components/DarkmodeButton";
 	import BookShelf from "@/components/BookShelf";
 	import BookSpine from "@/components/BookSpine";
+	import NoScriptBanner from '@/components/NoScriptBanner';
 
 	export default 
 	{
@@ -37,7 +39,8 @@
 			SearchButton,
 			DarkmodeButton,
 			BookShelf,
-			BookSpine
+			BookSpine,
+			NoScriptBanner
 		},
 		metaInfo() 
 		{
