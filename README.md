@@ -3,4 +3,4 @@
 ### Usage
 1. `yarn install`
 3. `gridsome develop`
-4. `npm run build`
+4. `gridsome build`
