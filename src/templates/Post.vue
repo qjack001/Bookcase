@@ -22,8 +22,11 @@
 					:shelf="$page.post.shelf" 
 					:bookcase="$page.post.bookcase" 
 					:distance="$page.post.distance" 
+
 					:width="$page.post.width"
 					:height="$page.post.height"
+
+					:title="$page.post.title"
 					:background="$page.post.background"
 				/>
 			</book-shelf>
