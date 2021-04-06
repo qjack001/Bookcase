@@ -1,11 +1,15 @@
 <template>
 	<layout>
+		<div>
+			<noscript>
+				<div>
+					<no-script-banner/>
+				</div>
+			</noscript>
+		</div>
 		<header>
 			<search-button/>
 			<darkmode-button/>
-			<noscript>
-				<no-script-banner/>
-			</noscript>
 		</header>
 		<main>
 			<section>

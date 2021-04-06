@@ -1,11 +1,15 @@
 <template>
 	<layout>
+		<div>
+			<noscript>
+				<div>
+					<no-script-banner/>
+				</div>
+			</noscript>
+		</div>
 		<header>
 			<search-bar v-model="searchQuery"/>
 			<darkmode-button/>
-			<noscript>
-				<no-script-banner/>
-			</noscript>
 		</header>
 		<nav>
 			<ul class="book-list" aria-label="books">
