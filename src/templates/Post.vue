@@ -3,6 +3,9 @@
 		<header>
 			<search-button/>
 			<darkmode-button/>
+			<noscript>
+				<no-script-banner/>
+			</noscript>
 		</header>
 		<main>
 			<section>
@@ -40,6 +43,7 @@
 	import Tag from '@/components/Tag';
 	import BookShelf from '@/components/BookShelf';
 	import BookSpine from '@/components/BookSpine';
+	import NoScriptBanner from '@/components/NoScriptBanner';
 
 	export default
 	{
@@ -49,7 +53,8 @@
 			DarkmodeButton,
 			Tag,
 			BookShelf,
-			BookSpine
+			BookSpine,
+			NoScriptBanner
 		},
 		metaInfo() 
 		{

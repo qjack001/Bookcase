@@ -1,9 +1,7 @@
 <template>
-	<noscript>
-		<div role="status">
-			<p>Search and Darkmode require Javascript. <g-link to='/'>All books</g-link>.</p>
-		</div>
-	</noscript>
+	<div role="status">
+		<p>Search and Darkmode require Javascript. <g-link to='/'>All books</g-link>.</p>
+	</div>
 </template>
 
 <script>
