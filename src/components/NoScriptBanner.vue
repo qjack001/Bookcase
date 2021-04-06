@@ -1,9 +1,9 @@
 <template>
-	<component :is="noscript">
+	<noscript inline-template>
 		<div role="status">
 			<p>Search and Darkmode require Javascript. <g-link to='/'>All books</g-link>.</p>
 		</div>
-	</component>
+	</noscript>
 </template>
 
 <script>
