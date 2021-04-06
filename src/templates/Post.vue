@@ -1,15 +1,9 @@
 <template>
 	<layout>
-		<div>
-			<noscript>
-				<div>
-					<no-script-banner/>
-				</div>
-			</noscript>
-		</div>
 		<header>
 			<search-button/>
 			<darkmode-button/>
+			<no-script-banner/>
 		</header>
 		<main>
 			<section>
@@ -47,7 +41,7 @@
 	import Tag from '@/components/Tag';
 	import BookShelf from '@/components/BookShelf';
 	import BookSpine from '@/components/BookSpine';
-	import NoScriptBanner from '@/components/NoScriptBanner';
+	import NoScriptBanner from '@/components/NoScriptBanner.vue';
 
 	export default
 	{

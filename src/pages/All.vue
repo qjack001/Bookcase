@@ -1,15 +1,9 @@
 <template>
 	<layout>
-		<div>
-			<noscript>
-				<div>
-					<no-script-banner/>
-				</div>
-			</noscript>
-		</div>
 		<header>
 			<search-button/>
 			<darkmode-button/>
+			<no-script-banner/>
 		</header>
 		<main>
 			<book-shelf :noAnimate="true" class="bookshelf">
