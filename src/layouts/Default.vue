@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div v-focus-visible>
 		<slot/>
 	</div>
 </template>
